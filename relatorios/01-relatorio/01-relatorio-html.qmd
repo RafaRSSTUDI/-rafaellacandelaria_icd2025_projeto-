@@ -6,11 +6,12 @@ author: "Seu Nome"
 date: 2025-04-02
 format: 
   html:
-    theme: cosmo
+    theme: journal
     embed-resources: true
     toc: true
     number-sections: true
     code-fold: true
+    code-tools: true 
 execute:
   message: false
   warning: false

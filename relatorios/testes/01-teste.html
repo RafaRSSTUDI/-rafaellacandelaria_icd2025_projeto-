@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -82,8 +116,6 @@ window.Quarto = {
   <li><a href="#inserindo-links-para-página-da-web" id="toc-inserindo-links-para-página-da-web" class="nav-link" data-scroll-target="#inserindo-links-para-página-da-web"><span class="header-section-number">1.4</span> inserindo links para página da web</a></li>
   <li><a href="#escrevendo-mateática" id="toc-escrevendo-mateática" class="nav-link" data-scroll-target="#escrevendo-mateática"><span class="header-section-number">1.5</span> Escrevendo mateática</a></li>
   </ul></li>
-  <li><a href="#simulando-uma-va-com-distribuição-normal-padrão" id="toc-simulando-uma-va-com-distribuição-normal-padrão" class="nav-link" data-scroll-target="#simulando-uma-va-com-distribuição-normal-padrão"><span class="header-section-number">2</span> simulando uma VA com distribuição normal padrão</a></li>
-  <li><a href="#gráfico-de-linha-da-varável-simulada" id="toc-gráfico-de-linha-da-varável-simulada" class="nav-link" data-scroll-target="#gráfico-de-linha-da-varável-simulada"><span class="header-section-number">3</span> gráfico de linha da varável simulada</a></li>
   </ul>
 </nav>
 </div>
@@ -143,17 +175,23 @@ window.Quarto = {
 <h2 data-number="1.5" class="anchored" data-anchor-id="escrevendo-mateática"><span class="header-section-number">1.5</span> Escrevendo mateática</h2>
 <p>Integral <span class="math display">\[
 \int_{a}^{b} f(x) dx
-\]</span> ## CÉLILAS DE CÓDIGO</p>
+\]</span> ## CÉLULAS DE CÓDIGO</p>
 <p>Para inserir uma célula de cÓdigo R em um arquivo quarto, podemos usar o atalho “ctrl + Alt + I”</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># simulando uma VA com distribuição normal padrão</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># gráfico de linha da varável simulada</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="at">type =</span><span class="st">"l"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01-teste_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-</section>
-<section id="simulando-uma-va-com-distribuição-normal-padrão" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> simulando uma VA com distribuição normal padrão</h1>
-<p>x &lt;-rnorm(1000)</p>
-</section>
-<section id="gráfico-de-linha-da-varável-simulada" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> gráfico de linha da varável simulada</h1>
-<p>plot(x, type =““)</p>
 </section>
 
 </main>

@@ -43,7 +43,7 @@ Integral
 $$
 \int_{a}^{b} f(x) dx
 $$
-## CÉLILAS DE CÓDIGO
+## CÉLULAS DE CÓDIGO
 
 Para inserir uma célula de cÓdigo R em um arquivo quarto, podemos usar o atalho "ctrl + Alt + I"
 
@@ -52,5 +52,5 @@ Para inserir uma célula de cÓdigo R em um arquivo quarto, podemos usar o atalh
 x <-rnorm(1000)
 
 # gráfico de linha da varável simulada
-plot(x, type ="")
-
+plot(x, type ="l")
+```
